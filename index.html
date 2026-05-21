@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini CRM Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <h2>Mini CRM</h2>
+
+        <ul>
+
+            <li>Dashboard</li>
+            <li>Leads</li>
+            <li>Analytics</li>
+            <li>Settings</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <!-- Navbar -->
+
+        <div class="navbar">
+
+            <h1>Client Lead Management System</h1>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Leads..."
+                onkeyup="searchLead()"
+            >
+
+        </div>
+
+        <!-- Dashboard Cards -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2 id="totalLeads">0</h2>
+
+                <p>Total Leads</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 id="contactedLeads">0</h2>
+
+                <p>Contacted</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2 id="convertedLeads">0</h2>
+
+                <p>Converted</p>
+
+            </div>
+
+        </div>
+
+        <!-- Form -->
+
+        <div class="form-box">
+
+            <h2>Add New Lead</h2>
+
+            <input type="text" id="name" placeholder="Client Name">
+
+            <input type="email" id="email" placeholder="Client Email">
+
+            <input type="text" id="phone" placeholder="Phone Number">
+
+            <input type="text" id="source" placeholder="Lead Source">
+
+            <textarea id="notes" placeholder="Follow-up Notes"></textarea>
+
+            <button onclick="addLead()">
+                Add Lead
+            </button>
+
+        </div>
+
+        <!-- Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Source</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="leadTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
